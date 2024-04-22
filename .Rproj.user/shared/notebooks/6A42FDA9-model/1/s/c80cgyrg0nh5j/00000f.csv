@@ -1,0 +1,4 @@
+"0","con = duckdb.connect('my-db.duckdb')"
+"0","df = con.execute(""SELECT * FROM penguins"").fetchdf().dropna()"
+"0","con.close()"
+"0",""

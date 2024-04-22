@@ -1,0 +1,19 @@
+"0","install.packages(""DBI"")"
+"1","The following package(s) will be installed:
+"
+"1","- DBI [1.2.2]
+"
+"1","These packages will be installed into ""C:/Users/C25Francesca.Schefer/OneDrive - afacademy.af.edu/Desktop/MATH 378/Final Project/Lab 1/FinalProjLab1/renv/library/R-4.2/x86_64-w64-mingw32"".
+"
+"1","
+"
+"0","y"
+"1","
+"
+"1","# Installing packages --------------------------------------------------------
+"
+"1","- Installing DBI ...                            "
+"1","OK [linked from cache]
+"
+"1","Successfully installed 1 package in 72 milliseconds.
+"

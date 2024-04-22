@@ -1,0 +1,20 @@
+"0","from vetiver import VetiverModel, VetiverAPI"
+"0","import pins"
+"0",""
+"0","# Retrieve the model from the pin"
+"0","b = pins.board_folder('data/model', allow_pickle_read=True)"
+"0","v = VetiverModel.from_pin(b, 'penguin_model')"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+  File ""[90m]8;line = 108;file://C:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\vetiver\vetiver_model.pyC:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\vetiver\vetiver_model.py]8;;[39m"", line 108, in from_pin
+    model = board.pin_read(name, version)
+  File ""[90m]8;line = 213;file://C:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\pins\boards.pyC:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\pins\boards.py]8;;[39m"", line 213, in pin_read
+    meta = self.pin_fetch(name, version)
+  File ""[90m]8;line = 188;file://C:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\pins\boards.pyC:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\pins\boards.py]8;;[39m"", line 188, in pin_fetch
+    meta = self.pin_meta(name, version)
+  File ""[90m]8;line = 151;file://C:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\pins\boards.pyC:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\pins\boards.py]8;;[39m"", line 151, in pin_meta
+    versions = self.pin_versions(name, as_df=False)
+  File ""[90m]8;line = 99;file://C:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\pins\boards.pyC:\Users\C25Francesca.Schefer\AppData\Roaming\Python\Python39\site-packages\pins\boards.py]8;;[39m"", line 99, in pin_versions
+    raise PinsError(""Cannot check version, since pin %s does not exist"" % name)
+pins.errors.PinsError: Cannot check version, since pin penguin_model does not exist
+"

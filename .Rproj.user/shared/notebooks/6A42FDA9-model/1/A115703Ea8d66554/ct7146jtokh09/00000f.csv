@@ -1,0 +1,15 @@
+"0","X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'get_dummies' is not defined
+"
+"0","y = df['body_mass_g']"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'df' is not defined
+"
+"0","model = LinearRegression().fit(X, y)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'LinearRegression' is not defined
+"

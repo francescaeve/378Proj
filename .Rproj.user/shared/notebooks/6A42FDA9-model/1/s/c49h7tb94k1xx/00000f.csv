@@ -1,0 +1,6 @@
+"0","from vetiver import VetiverModel"
+"0","from pins import board_folder"
+"0",""
+"0","model_board = board_folder('/data/model', allow_pickle_read=True)"
+"0",""
+"0",""

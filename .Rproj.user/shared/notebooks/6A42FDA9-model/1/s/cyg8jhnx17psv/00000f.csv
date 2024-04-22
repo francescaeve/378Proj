@@ -1,0 +1,4 @@
+"0","import duckdb # pip install it if its not working"
+"0","from palmerpenguins import load_penguins"
+"0",""
+"0",""

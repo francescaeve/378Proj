@@ -1,0 +1,109 @@
+---
+title: "Model"
+format:
+  html:
+    code-fold: true
+---
+
+```{python}
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+from vetiver import VetiverModel, vetiver_pin_write
+from pins import board_folder
+import pins
+```
+
+## Get Data
+
+```{python}
+df = penguins.load_penguins().dropna()
+
+df.head(3)
+```
+
+## Define Model and Fit
+
+```{python}
+X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
+y = df['body_mass_g']
+
+model = LinearRegression().fit(X, y)
+```
+
+## Get some information
+
+```{python}
+print(f"R^2 {model.score(X,y)}")
+print(f"Intercept {model.intercept_}")
+print(f"Columns {X.columns}")
+print(f"Coefficients {model.coef_}")
+```
+
+```{python}
+import os
+from vetiver import VetiverModel, vetiver_pin_write
+from pins import board_folder
+
+# Define path
+model_path = "/data/model"
+os.makedirs(model_path, exist_ok=True)  # Ensure directory exists
+
+# Create a Vetiver model
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+```
+
+```{python}
+from vetiver import VetiverModel
+from pins import board_folder
+
+model_board = board_folder('/data/model', allow_pickle_read=True)
+
+```
+
+```{python}
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+
+model_board = board_folder(
+  "/data/model", 
+  allow_pickle_read = True
+)
+vetiver_pin_write(model_board, v)
+```
+
+```{python}
+from vetiver import VetiverAPI
+app = VetiverAPI(v, check_prototype = True)
+```
+
+```{python}
+##app.run(port = 8080)
+```
+
+```{python}
+import vetiver
+#vetiver.prepare_docker(model_board, "penguin_model")
+```
+
+```{python}
+import duckdb # pip install it if its not working
+from palmerpenguins import load_penguins
+
+```
+
+```{python}
+
+#con = duckdb.connect('my-db.duckdb')
+#df = load_penguins()
+#con.execute('CREATE TABLE penguins AS SELECT * FROM df')
+#con.close()
+
+```
+
+```{python}
+con = duckdb.connect('my-db.duckdb')
+df = con.execute("SELECT * FROM penguins").fetchdf().dropna()
+con.close()
+```

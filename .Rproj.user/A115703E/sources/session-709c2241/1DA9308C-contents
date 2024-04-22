@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "FinalProjLab1"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Homec
+      - about.qmd
+      - eda.qmd
+      - model.qmd
+
+format:
+  html:
+    theme: quartz
+    css: styles.css
+    toc: true
+
+editor: visual
+

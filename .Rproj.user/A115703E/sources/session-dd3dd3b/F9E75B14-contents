@@ -1,0 +1,2 @@
+# This is an illustrative example. Adapt it to your specific model and data preparation steps.
+vetiver::prepare_docker(vetiver_model, path = "C:\Users\C25Francesca.Schefer\OneDrive - afacademy.af.edu\Desktop\MATH 378\Final Project\Lab 1\FinalProjLab1/Dockerfile")
