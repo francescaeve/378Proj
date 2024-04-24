@@ -71,8 +71,7 @@ df %>%
 ```{r}
 #con <- DBI::dbConnect(
 #  duckdb::duckdb(), 
-#  dbdir = "my-db.duckdb"
-#  )
+#  dbdir = "my-db.duckdb")
 #df <- dplyr::tbl(con, "penguins")
 ```
 

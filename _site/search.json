@@ -18,6 +18,6 @@
     "href": "eda.html#penguin-size-vs-mass-by-species",
     "title": "Penguins EDA",
     "section": "Penguin Size vs Mass by Species",
-    "text": "Penguin Size vs Mass by Species\n\nCode\ndf %&gt;%\n  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n#install.packages(\"DBI\")\n\n\n\n\nCode\n#con &lt;- DBI::dbConnect(\n#  duckdb::duckdb(), \n#  dbdir = \"my-db.duckdb\"\n#  )\n#df &lt;- dplyr::tbl(con, \"penguins\")\n\n\n\n\nCode\n#DBI::dbDisconnect(con, shutdown = TRUE )\n\n\n\n\nCode\nlibrary(rmarkdown)\n\n\nWarning: package 'rmarkdown' was built under R version 4.2.3"
+    "text": "Penguin Size vs Mass by Species\n\nCode\ndf %&gt;%\n  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n#install.packages(\"DBI\")\n\n\n\n\nCode\n#con &lt;- DBI::dbConnect(\n#  duckdb::duckdb(), \n#  dbdir = \"my-db.duckdb\")\n#df &lt;- dplyr::tbl(con, \"penguins\")\n\n\n\n\nCode\n#DBI::dbDisconnect(con, shutdown = TRUE )\n\n\n\n\nCode\nlibrary(rmarkdown)\n\n\nWarning: package 'rmarkdown' was built under R version 4.2.3"
   }
 ]
