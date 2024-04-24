@@ -1,8 +1,0 @@
----
-title: "Lab6"
----
-
-```{r}
-vetiver::prepare_docker(vetiver_model)
-
-```
