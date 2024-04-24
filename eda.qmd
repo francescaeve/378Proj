@@ -80,3 +80,7 @@ df %>%
 #DBI::dbDisconnect(con, shutdown = TRUE )
 
 ```
+
+```{r}
+library(rmarkdown)
+```
